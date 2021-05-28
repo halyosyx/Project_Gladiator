@@ -36,24 +36,9 @@ public class PlayerLocomotion : MonoBehaviour
         float delta = Time.deltaTime;
 
         inputHandler.TickInput(delta);
+        HandleMovement(delta);
+        HandleRollingAndSprinting(delta);
 
-        moveDirection = cameraObject.forward * inputHandler.vertical;
-        moveDirection += cameraObject.right * inputHandler.horizontal;
-        moveDirection.Normalize();
-        moveDirection.y = 0;
-
-        float speed = movementSpeed;
-        moveDirection *= speed;
-
-        Vector3 projectVelocity = Vector3.ProjectOnPlane(moveDirection , normalVector);
-        rigidbody.velocity = projectVelocity;
-
-        animationHandler.UpdateAnimatorValues(inputHandler.moveAmount , 0);
-
-        if (animationHandler.canRotate)
-        {
-            HandleRotation(delta);
-        }
 
     }
 
@@ -85,6 +70,47 @@ public class PlayerLocomotion : MonoBehaviour
         myTransform.rotation = targetRotation;
     }
 
+    public void HandleMovement(float delta)
+    {
+        moveDirection = cameraObject.forward * inputHandler.vertical;
+        moveDirection += cameraObject.right * inputHandler.horizontal;
+        moveDirection.Normalize();
+        moveDirection.y = 0;
 
+        float speed = movementSpeed;
+        moveDirection *= speed;
+
+        Vector3 projectVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);
+        rigidbody.velocity = projectVelocity;
+
+        animationHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0);
+
+        if (animationHandler.canRotate)
+        {
+            HandleRotation(delta);
+        }
+    }
+
+    public void HandleRollingAndSprinting(float delta)
+    {
+        if (animationHandler.anim.GetBool("isInteracting"))
+        {
+            return;
+        }
+        if (inputHandler.rollFlag)
+        {
+            moveDirection = cameraObject.forward * inputHandler.vertical;
+            moveDirection = cameraObject.right * inputHandler.horizontal;
+
+            if (inputHandler.moveAmount > 0)
+            {
+                animationHandler.PlayTargetAnimation("Rolling", true);
+                moveDirection.y = 0;
+                Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
+                myTransform.rotation = rollRotation;
+            }
+
+        }
+    }
     #endregion
 }
