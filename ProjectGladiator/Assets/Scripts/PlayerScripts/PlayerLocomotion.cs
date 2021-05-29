@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
-
+    PlayerManager playerManager;
     Transform cameraObject;
     InputHandler inputHandler;
     Vector3 moveDirection;
@@ -23,6 +23,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     void Start()
     {
+        playerManager = GetComponent<PlayerManager>();
         rigidbody = GetComponent<Rigidbody>();
         inputHandler = GetComponent<InputHandler>();
         animationHandler = GetComponentInChildren<AnimationHandler>();
@@ -31,16 +32,6 @@ public class PlayerLocomotion : MonoBehaviour
         animationHandler.Initialize();
     }
 
-    public void Update()
-    {
-        float delta = Time.deltaTime;
-
-        inputHandler.TickInput(delta);
-        HandleMovement(delta);
-        HandleRollingAndSprinting(delta);
-
-
-    }
 
     #region Movement
 
