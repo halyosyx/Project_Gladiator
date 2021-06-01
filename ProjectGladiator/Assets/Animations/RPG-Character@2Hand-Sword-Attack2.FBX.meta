@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b242907c6f8e8dd459382020ea7044e3
+guid: 7b5b17e2d42e0424f9c36012595dc9b6
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
@@ -701,7 +701,7 @@ ModelImporter:
     second: Box001
   - first:
       74: 7400000
-    second: 2Hand-Sword-Attack4
+    second: 2Hand-Sword-Attack2
   - first:
       95: 9500000
     second: //RootNode
@@ -735,8 +735,7 @@ ModelImporter:
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
       improve retargeting quality.\n\t'B_Spine' has translation animation that will
-      be discarded.\n\t'B_Spine1' has translation animation that will be discarded.\n\t'B_Spine2'
-      has translation animation that will be discarded.\n"
+      be discarded.\n\t'B_Spine1' has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -750,7 +749,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 2Hand-Sword-Attack4
+      name: 2Hand-Sword-Attack2
       takeName: Take 001
       internalID: 7400000
       firstFrame: 0
@@ -765,7 +764,7 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
@@ -774,7 +773,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.42142862
+      - time: 0.39020616
         functionName: Hit
         data: 
         objectReferenceParameter: {instanceID: 0}
