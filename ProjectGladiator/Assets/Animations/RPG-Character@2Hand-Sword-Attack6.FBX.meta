@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b242907c6f8e8dd459382020ea7044e3
+guid: c9cdccfb9d6cfef4d9992105a94b5d86
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
@@ -320,6 +320,9 @@ ModelImporter:
     second: Box001
   - first:
       1: 100210
+    second: Spear
+  - first:
+      1: 100212
     second: Exporter
   - first:
       4: 400000
@@ -638,6 +641,9 @@ ModelImporter:
     second: Box001
   - first:
       4: 400210
+    second: Spear
+  - first:
+      4: 400212
     second: Exporter
   - first:
       23: 2300000
@@ -658,6 +664,9 @@ ModelImporter:
       23: 2300010
     second: Box001
   - first:
+      23: 2300012
+    second: Spear
+  - first:
       33: 3300000
     second: Mesh_Soldier_A
   - first:
@@ -675,6 +684,9 @@ ModelImporter:
   - first:
       33: 3300010
     second: Box001
+  - first:
+      33: 3300012
+    second: Spear
   - first:
       43: 4300000
     second: Mesh_Soldier_A
@@ -700,8 +712,11 @@ ModelImporter:
       43: 4300014
     second: Box001
   - first:
+      43: 4300016
+    second: Spear
+  - first:
       74: 7400000
-    second: 2Hand-Sword-Attack4
+    second: 2Hand-Sword-Attack6
   - first:
       95: 9500000
     second: //RootNode
@@ -735,8 +750,7 @@ ModelImporter:
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
       improve retargeting quality.\n\t'B_Spine' has translation animation that will
-      be discarded.\n\t'B_Spine1' has translation animation that will be discarded.\n\t'B_Spine2'
-      has translation animation that will be discarded.\n"
+      be discarded.\n\t'B_Spine2' has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -750,7 +764,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 2Hand-Sword-Attack4
+      name: 2Hand-Sword-Attack6
       takeName: Take 001
       internalID: 7400000
       firstFrame: 0
@@ -774,7 +788,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.42142862
+      - time: 0.4103092
         functionName: Hit
         data: 
         objectReferenceParameter: {instanceID: 0}

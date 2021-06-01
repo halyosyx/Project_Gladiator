@@ -6,5 +6,5 @@ using UnityEngine;
 public class WeaponItem : Item
 {
     public GameObject modelPrefab;
-    public bool unarmed;
+    public bool isUnarmed;
 }
