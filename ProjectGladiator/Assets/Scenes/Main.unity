@@ -4144,6 +4144,8 @@ MonoBehaviour:
   mouseX: 0
   mouseY: 0
   b_input: 0
+  rt_Input: 0
+  rb_Input: 0
   rollFlag: 0
 --- !u!114 &2099441037
 MonoBehaviour:

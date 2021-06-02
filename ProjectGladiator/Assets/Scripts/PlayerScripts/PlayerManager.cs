@@ -50,5 +50,7 @@ public class PlayerManager : MonoBehaviour
     private void LateUpdate()
     {
         inputHandler.rollFlag = false;
+        inputHandler.rt_Input = false;
+        inputHandler.rb_Input = false;
     }
 }

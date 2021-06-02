@@ -11,18 +11,22 @@ public class InputHandler : MonoBehaviour
     public float mouseY;
 
     public bool b_input;
+    public bool rt_Input;
+    public bool rb_Input;
     public bool rollFlag;
  
 
     PlayerControls inputActions;
+    PlayerAttacking playerAttacking;
     
 
     Vector2 movementInput;
     Vector2 cameraInput;
 
-
-
-  
+    private void Awake()
+    {
+        playerAttacking = GetComponent<PlayerAttacking>();
+    }
 
     public void OnEnable()
     {
@@ -45,6 +49,7 @@ public class InputHandler : MonoBehaviour
     {
         Moveinput(delta);
         HandleRollInput(delta);
+        HandleAttackInput(delta);
     }
 
     private void Moveinput(float delta)
@@ -63,6 +68,22 @@ public class InputHandler : MonoBehaviour
         if (b_input)
         {
             rollFlag = true;
+        }
+    }
+
+    private void HandleAttackInput(float delta)
+    {
+        inputActions.PlayerActions.RB.performed += i => rb_Input = true;
+        inputActions.PlayerActions.RT.performed += i => rt_Input = true;
+
+        if (rb_Input)
+        {
+            playerAttacking.HandleLightAttack();
+        }
+
+        if (rt_Input)
+        {
+            playerAttacking.HandleHeavyAttack();
         }
     }
 }

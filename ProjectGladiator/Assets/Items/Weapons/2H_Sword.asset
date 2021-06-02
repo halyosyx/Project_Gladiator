@@ -16,4 +16,6 @@ MonoBehaviour:
   itemName: BigSword
   modelPrefab: {fileID: 1660807736491346131, guid: 14b55d40114f552478fb531a4f34a5b1,
     type: 3}
-  unarmed: 0
+  isUnarmed: 0
+  H_Light_Attack_1: 
+  H_Heavy_Attack_1: 

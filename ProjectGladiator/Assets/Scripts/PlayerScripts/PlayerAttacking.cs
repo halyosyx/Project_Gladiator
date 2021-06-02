@@ -12,12 +12,12 @@ public class PlayerAttacking : MonoBehaviour
     }
     public void HandleLightAttack()
     {
-       // animationHandler.PlayTargetAnimation();
+       animationHandler.PlayTargetAnimation("H_Light_Attack_1", true);
     }
 
 
     public void HandleHeavyAttack()
     {
-
+        animationHandler.PlayTargetAnimation("H_Heavy_Attack_1", true);
     }
 }
